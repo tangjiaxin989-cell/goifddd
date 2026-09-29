@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>猎杀场 · 第一回合</title>
+<meta name="description" content="16:9 猎杀场第一回合录制演示">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23eee' d='M2 2h10v4H6v6H2zm18 0h10v10h-4V6h-6zM2 20h4v6h6v4H2zm24 0h4v10H20v-4h6z'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<div class="viewport"><section id="stage" aria-label="猎杀场第一回合，16 比 9 录制画面">
+<header><div class="brand"><span class="cross">⌖</span> 猎杀场 <small>THE HUNTING GROUND</small></div><div class="round"><small>ROUND</small> 01 <span>第一回合</span></div><div class="status">08 <span>名猎手</span><b> / </b>04 <span>次行动</span></div></header>
+<div class="field-label">行动场 / <span id="mode-label">等待行动</span></div>
+<svg id="connections" viewBox="0 0 1600 900" aria-label="行动连线"><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#eee" stroke-width="1.4"/></marker></defs><g id="lines"></g></svg>
+<div id="cards"></div><div id="badges"></div><div id="settlement" aria-live="polite"></div><div id="chat-feed" aria-live="polite"></div><div id="result-banner" aria-live="polite"></div>
+<input id="portrait-upload" type="file" accept="image/*" hidden>
+<div class="frame-corner tl"></div><div class="frame-corner tr"></div><div class="frame-corner bl"></div><div class="frame-corner br"></div>
+</section></div>
+<section class="controls" aria-label="录制控制台">
+<div class="control-top"><div><span class="eyebrow">DIRECTOR PANEL</span><h1>第一回合 <span id="step-caption">/ 等待行动</span></h1></div><div class="buttons"><button id="reset">重置</button><button id="previous" aria-label="上一步">←</button><button id="next">逐个显示 <kbd>→</kbd></button><button id="settle">结算画面 <kbd>5</kbd></button><button id="record">录制画面 <kbd>H</kbd></button><button id="fullscreen">全屏 <kbd>F</kbd></button></div></div>
+<div id="actions" class="actions"></div>
+<div class="panel-footer"><span>数字 1–4 聚焦 · 5 结算画面 · 方向键逐步播放 · H 隐藏控制台 · Esc 返回</span><span id="progress">0 / 5</span></div>
+<p id="asset-warning" role="status"></p>
+</section>
+</main>
+<script src="asset-bounds.js"></script><script src="app.js"></script>
+</body></html>
